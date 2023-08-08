@@ -13,7 +13,6 @@ public:
                     }
                     else{
                         col0 = 0;
-
                     }
                 }
             }
