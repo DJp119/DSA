@@ -2,10 +2,12 @@
 
     Time Complexity : O(N!)
     Space Complexity : O(N * N)
-    
+     
     Where N is the number of Queens.
 
 */
+https://haseebq.com/n-queens-visualizer/
+
 class Solution {
 public:
     unordered_map<int,bool>rowCheck;
