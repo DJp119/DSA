@@ -1,3 +1,6 @@
+// BFS
+// TC- O(N2)
+// SC - O(N2) + O(N2)
 class Solution {
     private:
     void bfs(vector<vector<char>>&grid,int i,int j,vector<vector<int>>&vis){
