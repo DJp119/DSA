@@ -32,3 +32,31 @@ public:
     return true;
     }
 };
+
+
+
+// DFS
+Time complexity: O(V + E),
+Auxiliary Space: O(V + E)
+class Solution{
+    private:
+    bool dfs(int node,int col , vector<int>&color,vector<vector<int>>&adj){
+        color[node]=col;
+        for(auto neighbour : adj[node]){
+            if(color[neighbour]==-1){
+                if(dfs(neighbour,!col,color,adj)==false) return false;
+            } 
+            else if(color[neighbour]==col) return false;
+        }
+    return true;
+    }
+    public:
+        bool isBipartite(vector<vector<int>>& gr) {
+            int n = gr.size();
+            vector<int>color(n,-1);
+            for(int i = 0;i<n;i++){
+                if(color[i]==-1 && !dfs(i,0,color,gr)) return false;
+            }
+    return true;
+    }
+};
