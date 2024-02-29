@@ -28,3 +28,16 @@ class Solution{
 };
 
 // TC - O(N)   , SC - O(N) 
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        map<int,int>mymap;
+        for(int i=0;i<nums.size();i++){
+            int com = target-nums[i];
+            if(mymap.count(com)) return {mymap[com],i};
+            
+            mymap[nums[i]]=i;
+        }
+    return {};
+    }
+};
