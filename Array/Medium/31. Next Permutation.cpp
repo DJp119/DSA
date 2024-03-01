@@ -22,3 +22,10 @@ public:
     }
 };
 // Total TC:O(3n)~O(n)  SC:O(1)
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        next_permutation(nums.begin(), nums.end());
+    }
+};
+https://leetcode.com/problems/next-permutation/
