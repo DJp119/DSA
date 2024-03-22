@@ -27,3 +27,16 @@ bool hasCycle(ListNode *head) {
     }
     return false;
 }
+
+        if(head==NULL) return head;
+        ListNode* temp = head;
+        unordered_map<ListNode*,int>mymap;
+        while(temp->next){
+            if(mymap.find(temp)!=mymap.end()) return true;
+            mymap[temp]=1;
+            temp = temp->next;
+        }
+        return false;
+
+
+https://leetcode.com/problems/linked-list-cycle/description/
