@@ -73,5 +73,7 @@ public:
         slow->next = slow->next->next;
 
         return start->next;
+        
     }
 };
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
