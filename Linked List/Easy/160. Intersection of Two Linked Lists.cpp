@@ -1,3 +1,7 @@
+1. Brute Force Solution
+Time Complexity : O(m * n)
+Space Complexity : O(1)
+
 class Solution {
 public:
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -15,6 +19,11 @@ public:
 		return NULL;
 	}
 };
+
+2. HashMap Solution
+Time Complexity : O(m + n)
+Space Complexity : O(m)
+
 class Solution {
 public:
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -32,6 +41,11 @@ public:
 		return NULL;
 	}
 };
+
+3. Length Difference Solution
+Time Complexity : O(m + n)
+Space Complexity : O(1)
+	
 class Solution {
 public:
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -70,6 +84,11 @@ public:
 		return NULL;
 	}
 };
+
+4. Two-Pointers Solution
+Time Complexity : O(m + n)
+Space Complexity : O(1)
+	
 class Solution {
 public:
 	ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -92,3 +111,4 @@ public:
 		return ptr1;
 	}
 };
+https://leetcode.com/problems/intersection-of-two-linked-lists/description/
