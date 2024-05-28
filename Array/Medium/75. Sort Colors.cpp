@@ -49,3 +49,25 @@ class Solution{
         }
     }
 };
+
+
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int left = 0 , right = nums.size()-1,middle = nums.size()-1;
+        while(left<=middle){
+            if(nums[middle]==0) {
+                swap(nums[middle],nums[left]);
+                left++;
+                // middle++;
+            }
+            else if(nums[middle]==2){
+                swap(nums[middle],nums[right]);
+                right--;
+                middle--;
+            }
+            else middle--;
+        }
+    }
+};
