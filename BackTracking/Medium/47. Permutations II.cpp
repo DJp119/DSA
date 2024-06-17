@@ -24,6 +24,14 @@ public:
         return ans;
     }
 };
+Time Complexity : O(N!), In worst case when all element of Array(nums) will different then there will be N!
+    permutations and N! function calls. Where N is the size of the array(nums) and ! stands for factorial. 
+
+    Space Complexity: O(N!*N), In worst case when all element of Array(nums) will different, since we have to
+    store all the possible solutions which are N! in size where N is the size of the array and ! stands for
+    factorial.
+
+    Solved using Array + BackTracking. 
 class Solution {
 public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
