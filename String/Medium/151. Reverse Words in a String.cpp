@@ -22,3 +22,32 @@ public:
 };
 
 https://leetcode.com/problems/reverse-words-in-a-string/
+
+
+class Solution {
+public:
+    string reverseWords(string s) {
+     string ans ="";
+     string temp="";
+     int left = 0 ;
+     int right = s.size()-1;
+     while(s[left] == ' ') left++;    
+     while(s[right] == ' ') right--;
+
+     while(left<=right){
+        if(s[left] != ' ') temp+=s[left];
+        else{
+            if(s[left-1] ==' ') {
+                left++;
+                continue;
+            } 
+            else ans = temp + " " + ans, temp ="";
+        }
+        left++;
+     }    
+     ans = temp + " "+ ans;
+     ans.resize(ans.length()-1);
+     return ans;
+    }
+};
+
